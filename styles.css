@@ -1,46 +1,60 @@
-/* Botón hover navbar */
-.btn-navbar {
-  padding: 0.5rem 0.75rem;
-  border-radius: 9999px;
-  border: 1px solid transparent;
-  background: none;
-  color: var(--azul-muy-oscuro);
-  font-size: 1rem;
-  font-family: inherit;
-  transition: all 0.2s;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+:root {
+  --blanco-caldo: #FAF9F6;
+  --crema-oscuro: #F3EBDD;
+  --azul-muy-oscuro: #071426;
+  --azul-muy-oscuro-alt: #0B1324;
+  --dorado: #C29A5B;
+  --dorado-alt: #B88A44;
+  --gris-claro: #E8E4DC;
+  --gris-medio: #6F6A63;
+  --crema-oscuro-2: #E9E1D3;
+  --crema-oscuro-3: #F7F3EA;
+  --dorado-25: rgba(194,154,91,0.25);
+  --dorado-oscuro-25: rgba(184,138,68,0.25);
 }
-.btn-navbar:hover, .btn-navbar:focus-visible, :is(.btn-navbar):hover, :is(.btn-navbar):focus-visible {
-  background: var(--gris-claro) !important;
-  border-color: var(--dorado) !important;
-  color: var(--dorado) !important;
-  outline: none !important;
-  transition: all 0.2s !important;
+/* Fondo animado para el body */
+.fondo-animado-body {
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
 }
-/* Botón hover footer/navbar */
-.btn-footer {
-  padding: 0.5rem 0.75rem;
-  border-radius: 9999px;
-  border: 1px solid transparent;
-  background: none;
-  color: var(--gris-medio);
-  font-size: 1rem;
-  font-family: inherit;
-  transition: all 0.2s;
-  cursor: pointer;
+  .fondo-animado-body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('imagenes-referencia/Fondo-background.png');
+    background-repeat: repeat-x;
+    background-size: cover;
+    opacity: 0.64;
+    z-index: -1;
+    pointer-events: none;
+    will-change: background-position;
+    transition: opacity 0.3s;
+    animation: fondoBodyAnimacion 60s linear infinite;
+  }
+@keyframes fondoBodyAnimacion {
+  0% { background-position-x: 0; }
+  100% { background-position-x: -100vw; }
 }
-.btn-footer:hover, .btn-footer:focus-visible, :is(.btn-footer):hover, :is(.btn-footer):focus-visible {
-  background: var(--gris-claro) !important;
-  border-color: var(--dorado) !important;
-  color: var(--dorado) !important;
-  outline: none !important;
-  transition: all 0.2s !important;
+
+@media (max-width: 600px) {
+  .fondo-animado-body::before {
+    background-size: cover;
+    animation-duration: 40s;
+  }
 }
-/* styles.css - Maison Élance
-   Solo para colores y degradados personalizados */
+.bg-navbar-dorado-25 {
+  background-color: var(--dorado-25);
+}
+.bg-navbar-dorado-oscuro-25 {
+  background-color: var(--dorado-oscuro-25);
+}
+.bg-crema-piel {
+  background: #F7E3D0;
+}
 
 :root {
   --blanco-caldo: #FAF9F6;

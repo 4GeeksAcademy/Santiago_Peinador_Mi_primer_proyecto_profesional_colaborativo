@@ -9,21 +9,160 @@
     <meta name="keywords" content="Tailwind, SEO, Responsive, Moderno, HTML, CSS" />
     <meta name="author" content="4GeeksAcademy" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="bg-blanco-caldo min-h-screen flex flex-col">
+  <body class="bg-blanco-caldo min-h-screen flex flex-col fondo-animado-body">
     <!-- Navbar -->
     <div id="navbar-placeholder"></div>
     <main class="flex-1 flex flex-col items-center justify-center px-4">
-      <!-- Hero vacío temporalmente -->
+      <!-- Hero destacado -->
+      <section class="w-full max-w-6xl mx-auto mt-6 mb-10 px-2">
+        <div class="rounded-2xl shadow-md p-4 sm:p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-10 relative overflow-hidden hero-campana bg-navbar-dorado-25 backdrop-blur-md">
+          <div class="flex-1 flex flex-col items-center md:items-start justify-center z-10 text-center md:text-left">
+            <h1 class="text-2xl sm:text-3xl md:text-5xl 2xl:text-7xl font-serif mb-2 sm:mb-3 tracking-widest uppercase hero-lujo-titulo">Colección Primavera 2026</h1>
+            <p class="text-base sm:text-lg md:text-xl 2xl:text-2xl font-sans mb-3 sm:mb-4">Descubre los productos más exclusivos y las campañas especiales de Maison Élance. Inspiración parisina, lujo contemporáneo.</p>
+          </div>
+          <div class="flex flex-col items-center justify-center w-full md:w-auto max-w-xs 2xl:max-w-md">
+            <a href="#catalogo" class="block border-none bg-none p-0 rounded-[18px] shadow-[0_2px_12px_0_rgba(194,154,91,0.10)] transition-[box-shadow,transform] duration-200 w-full aspect-square max-w-[40vw] sm:max-w-[260px] md:max-w-[320px] 2xl:max-w-[400px] overflow-hidden mt-2 btn-hero-top-img">
+              <img src="imagenes-referencia/PRODUCTOS/Producto_Top.png" alt="Producto Top" class="w-full h-full object-cover rounded-[18px] img-hero-top-clickeable" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nuevos lanzamientos -->
+      <section class="w-full max-w-6xl mx-auto mb-8 px-2">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-3 sm:mb-4 tracking-wide">Nuevos lanzamientos</h2>
+        <div class="productos-scroll flex gap-4 sm:gap-6 overflow-x-auto pb-2">
+          <!-- Cards nuevos lanzamientos -->
+          <div class="relative min-w-[60vw] sm:min-w-[260px] md:min-w-[300px] 2xl:min-w-[340px] max-w-[90vw] sm:max-w-[320px] 2xl:max-w-[380px] min-h-[180px] sm:min-h-[260px] md:min-h-[320px] 2xl:min-h-[380px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/Bolso_RedondoN.png');"></div>
+            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
+              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Bolso Redondo Élance</h3>
+              <p class="precio font-sans text-[1.05rem] mb-2">€320</p>
+              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
+            </div>
+          </div>
+          <div class="relative min-w-[60vw] sm:min-w-[260px] md:min-w-[300px] 2xl:min-w-[340px] max-w-[90vw] sm:max-w-[320px] 2xl:max-w-[380px] min-h-[180px] sm:min-h-[260px] md:min-h-[320px] 2xl:min-h-[380px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/Brazalete+CollarN.png');"></div>
+            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
+              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Brazalete & Collar Lumière</h3>
+              <p class="precio font-sans text-[1.05rem] mb-2">€210</p>
+              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
+            </div>
+          </div>
+          <div class="relative min-w-[60vw] sm:min-w-[260px] md:min-w-[300px] 2xl:min-w-[340px] max-w-[90vw] sm:max-w-[320px] 2xl:max-w-[380px] min-h-[180px] sm:min-h-[260px] md:min-h-[320px] 2xl:min-h-[380px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/Chaqueta_BlancaN.png');"></div>
+            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
+              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Chaqueta Blanche Élégance</h3>
+              <p class="precio font-sans text-[1.05rem] mb-2">€450</p>
+              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
+            </div>
+          </div>
+          <div class="relative min-w-[60vw] sm:min-w-[260px] md:min-w-[300px] 2xl:min-w-[340px] max-w-[90vw] sm:max-w-[320px] 2xl:max-w-[380px] min-h-[180px] sm:min-h-[260px] md:min-h-[320px] 2xl:min-h-[380px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/GafasN.png');"></div>
+            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
+              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Gafas Soleil Élégant</h3>
+              <p class="precio font-sans text-[1.05rem] mb-2">€180</p>
+              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
+            </div>
+          </div>
+          <div class="relative min-w-[60vw] sm:min-w-[260px] md:min-w-[300px] 2xl:min-w-[340px] max-w-[90vw] sm:max-w-[320px] 2xl:max-w-[380px] min-h-[180px] sm:min-h-[260px] md:min-h-[320px] 2xl:min-h-[380px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/ColoniaN.png');"></div>
+            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
+              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Colonia Eau Paris</h3>
+              <p class="precio font-sans text-[1.05rem] mb-2">€95</p>
+              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Más vendidos -->
+      <section class="w-full max-w-6xl mx-auto mb-8 px-2">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-3 sm:mb-4 tracking-wide">Más vendidos</h2>
+        <div class="productos-scroll flex gap-4 sm:gap-6 overflow-x-auto pb-2">
+          <!-- Cards más vendidos -->
+          <div class="relative min-w-[220px] sm:min-w-[260px] md:min-w-[300px] max-w-[90vw] sm:max-w-[320px] min-h-[260px] sm:min-h-[320px] md:min-h-[340px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/BolsoClasicoV.png');"></div>
+            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
+              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Bolso Clásico Noir</h3>
+              <p class="precio font-sans text-[1.05rem] mb-2">€390</p>
+              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
+            </div>
+          </div>
+          <div class="relative min-w-[270px] max-w-[320px] min-h-[340px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/Bolso+CarteritaV.png');"></div>
+            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
+              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Bolso & Carterita Nuit</h3>
+              <p class="precio font-sans text-[1.05rem] mb-2">€260</p>
+              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
+            </div>
+          </div>
+          <div class="relative min-w-[270px] max-w-[320px] min-h-[340px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/BestidoBlancoEleganteV.png');"></div>
+            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
+              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Vestido Blanc Élégant</h3>
+              <p class="precio font-sans text-[1.05rem] mb-2">€520</p>
+              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
+            </div>
+          </div>
+          <div class="relative min-w-[270px] max-w-[320px] min-h-[340px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/PañueloSedaEleganteV.png');"></div>
+            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
+              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Pañuelo Seda Élégant</h3>
+              <p class="precio font-sans text-[1.05rem] mb-2">€110</p>
+              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
+            </div>
+          </div>
+          <div class="relative min-w-[270px] max-w-[320px] min-h-[340px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/ZapatosElegantesMujeroV.png');"></div>
+            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
+              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Zapatos Élégance Femme</h3>
+              <p class="precio font-sans text-[1.05rem] mb-2">€340</p>
+              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Footer -->
     <div id="footer-placeholder"></div>
     <script>
       // Cargar navbar y footer
-      fetch('navbar.html').then(r => r.text()).then(html => { document.getElementById('navbar-placeholder').innerHTML = html; });
-      fetch('footer.html').then(r => r.text()).then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
+      const cargarFragmento = (id, archivo) => {
+        return fetch(archivo)
+          .then(r => {
+            if (!r.ok) {
+              throw new Error(`No se pudo cargar ${archivo}`);
+            }
+            return r.text();
+          })
+          .then(html => {
+            document.getElementById(id).innerHTML = html;
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      };
+
+      Promise.all([
+        cargarFragmento('navbar-placeholder', 'navbar.html'),
+        cargarFragmento('footer-placeholder', 'footer.html')
+      ]).then(() => {
+        document.dispatchEvent(new Event('maison:fragments-loaded'));
+        if (typeof initMaisonElance === 'function') {
+          initMaisonElance();
+        }
+      });
     </script>
     <script src="functions.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof animarFondoBody === 'function') {
+          animarFondoBody();
+        }
+      });
+    </script>
   </body>
 </html>

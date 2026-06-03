@@ -8,161 +8,457 @@
     <meta name="description" content="Página principal del proyecto con Tailwind CSS. Diseño moderno, responsive y SEO optimizado." />
     <meta name="keywords" content="Tailwind, SEO, Responsive, Moderno, HTML, CSS" />
     <meta name="author" content="4GeeksAcademy" />
-    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="bg-blanco-caldo min-h-screen flex flex-col fondo-animado-body">
-    <!-- Navbar -->
+  <body class="bg-blanco-caldo min-h-screen flex flex-col">
+    <div class="fixed inset-0 -z-10 bg-[url('imagenes-referencia/Fondo-background.webp')] bg-cover bg-repeat-x opacity-[0.64] pointer-events-none"></div>
+    <!-- Navbar (solo placeholder, el contenido está en navbar.html) -->
     <div id="navbar-placeholder"></div>
-    <main class="flex-1 flex flex-col items-center justify-center px-4">
-      <!-- Hero destacado -->
-      <section class="w-full max-w-6xl mx-auto mt-6 mb-10 px-2">
-        <div class="rounded-2xl shadow-md p-4 sm:p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-10 relative overflow-hidden hero-campana bg-navbar-dorado-25 backdrop-blur-md">
-          <div class="flex-1 flex flex-col items-center md:items-start justify-center z-10 text-center md:text-left">
-            <h1 class="text-2xl sm:text-3xl md:text-5xl 2xl:text-7xl font-serif mb-2 sm:mb-3 tracking-widest uppercase hero-lujo-titulo">Colección Primavera 2026</h1>
-            <p class="text-base sm:text-lg md:text-xl 2xl:text-2xl font-sans mb-3 sm:mb-4">Descubre los productos más exclusivos y las campañas especiales de Maison Élance. Inspiración parisina, lujo contemporáneo.</p>
+    <main id="main-content" class="flex-1 flex flex-col items-center justify-center px-4">
+      <div id="main_home" class="w-full" style="display:block; width:100%;">
+        <!-- HERO -->
+        <section class="w-full max-w-6xl mx-auto mt-6 mb-10 px-2">
+          <div class="rounded-2xl shadow-md p-4 sm:p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-10 relative overflow-hidden hero-campana bg-navbar-dorado-25 backdrop-blur-md">
+            <div class="flex-1 flex flex-col items-center md:items-start justify-center z-10 text-center md:text-left">
+              <h1 class="text-2xl sm:text-3xl md:text-5xl 2xl:text-7xl font-serif mb-2 sm:mb-3 tracking-widest uppercase hero-lujo-titulo">Colección Primavera 2026</h1>
+              <p class="text-base sm:text-lg md:text-xl 2xl:text-2xl font-sans mb-3 sm:mb-4">Descubre los productos más exclusivos y las campañas especiales de Maison Élance. Inspiración parisina, lujo contemporáneo.</p>
+            </div>
+            <div class="flex flex-col items-center justify-center w-full md:w-auto max-w-xs 2xl:max-w-md">
+              <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="ropa" class="block border-none bg-none p-0 rounded-[18px] shadow-[0_2px_12px_0_rgba(194,154,91,0.10)] transition-[box-shadow,transform] duration-200 w-full aspect-square max-w-[40vw] sm:max-w-[260px] md:max-w-[320px] 2xl:max-w-[400px] overflow-hidden mt-2 btn-hero-top-img">
+                <img src="imagenes-referencia/PRODUCTOS/Producto_Top.webp" alt="Producto Top" class="w-full h-full object-cover rounded-[18px] img-hero-top-clickeable" />
+              </a>
+            </div>
           </div>
-          <div class="flex flex-col items-center justify-center w-full md:w-auto max-w-xs 2xl:max-w-md">
-            <a href="#catalogo" class="block border-none bg-none p-0 rounded-[18px] shadow-[0_2px_12px_0_rgba(194,154,91,0.10)] transition-[box-shadow,transform] duration-200 w-full aspect-square max-w-[40vw] sm:max-w-[260px] md:max-w-[320px] 2xl:max-w-[400px] overflow-hidden mt-2 btn-hero-top-img">
-              <img src="imagenes-referencia/PRODUCTOS/Producto_Top.png" alt="Producto Top" class="w-full h-full object-cover rounded-[18px] img-hero-top-clickeable" />
+        </section>
+        <!-- NUEVOS LANZAMIENTOS -->
+        <section class="w-full max-w-6xl mx-auto mb-8 px-2">
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-3 sm:mb-4 tracking-wide">Nuevos lanzamientos</h2>
+          <div class="productos-scroll flex gap-4 sm:gap-6 overflow-x-auto pt-3 pb-6">
+            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="ropa" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+              <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
+                <img src="imagenes-referencia/PRODUCTOS/BestidoBlancoEleganteV.webp" alt="Robe Blanche Élégante" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
+                <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Robe Blanche Élégante</h3>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Prêt-à-porter</p>
+                <p class="font-bold text-black text-lg mb-2">€220</p>
+              </div>
+            </a>
+            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="accesorios" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+              <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
+                <img src="imagenes-referencia/PRODUCTOS/BolsoClasicoV.webp" alt="Sac Classique Parisien" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
+                <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Sac Classique Parisien</h3>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Bolsos</p>
+                <p class="font-bold text-black text-lg mb-2">€180</p>
+              </div>
+            </a>
+            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="accesorios" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+              <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
+                <img src="imagenes-referencia/PRODUCTOS/PañueloSedaEleganteV.webp" alt="Foulard de Soie Lumière" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
+                <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Foulard de Soie Lumière</h3>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Accesorios</p>
+                <p class="font-bold text-black text-lg mb-2">€60</p>
+              </div>
+            </a>
+            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="perfumeria" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+              <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
+                <img src="imagenes-referencia/PRODUCTOS/ColoniaN.webp" alt="Eau de Parfum Élance" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
+                <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Eau de Parfum Élance</h3>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Perfumería</p>
+                <p class="font-bold text-black text-lg mb-2">€130</p>
+              </div>
+            </a>
+            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="ropa" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+              <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
+                <img src="imagenes-referencia/PRODUCTOS/Chaqueta_BlancaN.webp" alt="Blazer Blanche Couture" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
+                <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Blazer Blanche Couture</h3>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Alta costura</p>
+                <p class="font-bold text-black text-lg mb-2">€340</p>
+              </div>
             </a>
           </div>
-        </div>
-      </section>
+        </section>
+        <!-- MÁS VENDIDOS -->
+        <section class="w-full max-w-6xl mx-auto mb-8 px-2">
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-3 sm:mb-4 tracking-wide">Más vendidos</h2>
+          <div class="productos-scroll flex gap-4 sm:gap-6 overflow-x-auto pt-3 pb-6">
+            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="accesorios" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+              <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
+                <img src="imagenes-referencia/PRODUCTOS/Bolso+CarteritaV.webp" alt="Sac Élégant avec Pochette" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
+                <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Sac Élégant avec Pochette</h3>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Bolsos</p>
+                <p class="font-bold text-black text-lg mb-2">€210</p>
+              </div>
+            </a>
+            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="ropa" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+              <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
+                <img src="imagenes-referencia/PRODUCTOS/ZapatosElegantesMujeroV.webp" alt="Escarpins Élégants Femme" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
+                <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Escarpins Élégants Femme</h3>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Zapatos</p>
+                <p class="font-bold text-black text-lg mb-2">€150</p>
+              </div>
+            </a>
+            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="accesorios" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+              <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
+                <img src="imagenes-referencia/PRODUCTOS/Brazalete+CollarN.webp" alt="Parure Ornementale Lumière" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
+                <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parure Ornementale</h3>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Accesorios</p>
+                <p class="font-bold text-black text-lg mb-2">€95</p>
+              </div>
+            </a>
+            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="accesorios" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+              <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
+                <img src="imagenes-referencia/PRODUCTOS/Bolso_RedondoN.webp" alt="Sac Rond Nuit" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
+                <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Sac Rond Nuit</h3>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Bolsos</p>
+                <p class="font-bold text-black text-lg mb-2">€175</p>
+              </div>
+            </a>
+            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="accesorios" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+              <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
+                <img src="imagenes-referencia/PRODUCTOS/GafasN.webp" alt="Lunettes Soleil Paris" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
+                <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Lunettes Soleil Paris</h3>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Accesorios</p>
+                <p class="font-bold text-black text-lg mb-2">€110</p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+      <!-- CATÁLOGO (oculto por defecto) -->
+      <div id="main_catalogo" style="width: 100%;" class="w-full max-w-6xl mx-auto mt-6 mb-10 px-2">
+        <section class="mb-10">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-1 tracking-wide">Catálogo</h2>
+              <p class="text-sm text-azul-oscuro opacity-80">Explora las colecciones por categoría.</p>
+            </div>
+            <div class="relative w-full sm:w-auto">
+              <button id="catalogo-categorias-toggle" class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[color:var(--dorado)] bg-[rgba(255,255,255,0.9)] px-4 py-2 font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_20px_rgba(194,154,91,0.2)] sm:w-auto" aria-controls="catalogo-categorias-menu" aria-expanded="false" type="button">
+                Categorías
+                <span aria-hidden="true">☰</span>
+              </button>
+              <div id="catalogo-categorias-menu" class="absolute right-0 mt-2 w-full sm:w-56 bg-navbar-dorado-25/95 backdrop-blur-md border border-[color:var(--dorado)] rounded-2xl shadow-[0_12px_24px_rgba(31,42,68,0.12)] p-2 hidden z-20">
+                <ul class="flex flex-col gap-2" role="list">
+                  <li>
+                    <button type="button" class="w-full rounded-[0.9rem] border border-[color:var(--dorado)] px-3 py-2 text-left font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 bg-[rgba(194,154,91,0.8)]" data-catalogo-category="ropa" aria-pressed="true">Ropa</button>
+                  </li>
+                  <li>
+                    <button type="button" class="w-full rounded-[0.9rem] border border-[color:var(--dorado)] px-3 py-2 text-left font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 bg-blanco-caldo hover:bg-[rgba(194,154,91,0.12)]" data-catalogo-category="accesorios" aria-pressed="false">Accesorios</button>
+                  </li>
+                  <li>
+                    <button type="button" class="w-full rounded-[0.9rem] border border-[color:var(--dorado)] px-3 py-2 text-left font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 bg-blanco-caldo hover:bg-[rgba(194,154,91,0.12)]" data-catalogo-category="perfumeria" aria-pressed="false">Perfumería</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-      <!-- Nuevos lanzamientos -->
-      <section class="w-full max-w-6xl mx-auto mb-8 px-2">
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-3 sm:mb-4 tracking-wide">Nuevos lanzamientos</h2>
-        <div class="productos-scroll flex gap-4 sm:gap-6 overflow-x-auto pb-2">
-          <!-- Cards nuevos lanzamientos -->
-          <div class="relative min-w-[60vw] sm:min-w-[260px] md:min-w-[300px] 2xl:min-w-[340px] max-w-[90vw] sm:max-w-[320px] 2xl:max-w-[380px] min-h-[180px] sm:min-h-[260px] md:min-h-[320px] 2xl:min-h-[380px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
-            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/Bolso_RedondoN.png');"></div>
-            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
-              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Bolso Redondo Élance</h3>
-              <p class="precio font-sans text-[1.05rem] mb-2">€320</p>
-              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
-            </div>
-          </div>
-          <div class="relative min-w-[60vw] sm:min-w-[260px] md:min-w-[300px] 2xl:min-w-[340px] max-w-[90vw] sm:max-w-[320px] 2xl:max-w-[380px] min-h-[180px] sm:min-h-[260px] md:min-h-[320px] 2xl:min-h-[380px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
-            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/Brazalete+CollarN.png');"></div>
-            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
-              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Brazalete & Collar Lumière</h3>
-              <p class="precio font-sans text-[1.05rem] mb-2">€210</p>
-              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
-            </div>
-          </div>
-          <div class="relative min-w-[60vw] sm:min-w-[260px] md:min-w-[300px] 2xl:min-w-[340px] max-w-[90vw] sm:max-w-[320px] 2xl:max-w-[380px] min-h-[180px] sm:min-h-[260px] md:min-h-[320px] 2xl:min-h-[380px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
-            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/Chaqueta_BlancaN.png');"></div>
-            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
-              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Chaqueta Blanche Élégance</h3>
-              <p class="precio font-sans text-[1.05rem] mb-2">€450</p>
-              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
-            </div>
-          </div>
-          <div class="relative min-w-[60vw] sm:min-w-[260px] md:min-w-[300px] 2xl:min-w-[340px] max-w-[90vw] sm:max-w-[320px] 2xl:max-w-[380px] min-h-[180px] sm:min-h-[260px] md:min-h-[320px] 2xl:min-h-[380px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
-            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/GafasN.png');"></div>
-            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
-              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Gafas Soleil Élégant</h3>
-              <p class="precio font-sans text-[1.05rem] mb-2">€180</p>
-              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
-            </div>
-          </div>
-          <div class="relative min-w-[60vw] sm:min-w-[260px] md:min-w-[300px] 2xl:min-w-[340px] max-w-[90vw] sm:max-w-[320px] 2xl:max-w-[380px] min-h-[180px] sm:min-h-[260px] md:min-h-[320px] 2xl:min-h-[380px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
-            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/ColoniaN.png');"></div>
-            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
-              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Colonia Eau Paris</h3>
-              <p class="precio font-sans text-[1.05rem] mb-2">€95</p>
-              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
-            </div>
-          </div>
-        </div>
-      </section>
+          <div class="space-y-10">
+            <section data-catalogo-section="ropa">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                <h3 class="text-lg sm:text-xl font-serif text-azul-oscuro tracking-wide">Ropa</h3>
+                <span class="text-xs uppercase tracking-widest text-azul-oscuro opacity-70">Tren superior · Tren inferior · Completos</span>
+              </div>
+              <div class="space-y-8">
+                <div>
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Tren superior</h4>
+                  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ROPA/blouse_a_noeud_ivoire_P.webp" alt="Blouse a Noeud Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Blouse a Noeud Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Blusas</p>
+                      <p class="font-bold text-black text-lg mb-2">€145</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ROPA/blouse_portefeuille_satin_ivoire_P.webp" alt="Blouse Portefeuille Satin Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Blouse Portefeuille Satin</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Blusas</p>
+                      <p class="font-bold text-black text-lg mb-2">€158</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ROPA/pull_col_roule_ivoire_P.webp" alt="Pull Col Roule Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Pull Col Roule Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Punto</p>
+                      <p class="font-bold text-black text-lg mb-2">€149</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ROPA/veste_boucle_ivoire_P.webp" alt="Veste Boucle Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Veste Boucle Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Chaquetas</p>
+                      <p class="font-bold text-black text-lg mb-2">€214</p>
+                    </div>
+                  </div>
+                </div>
 
-      <!-- Más vendidos -->
-      <section class="w-full max-w-6xl mx-auto mb-8 px-2">
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-3 sm:mb-4 tracking-wide">Más vendidos</h2>
-        <div class="productos-scroll flex gap-4 sm:gap-6 overflow-x-auto pb-2">
-          <!-- Cards más vendidos -->
-          <div class="relative min-w-[220px] sm:min-w-[260px] md:min-w-[300px] max-w-[90vw] sm:max-w-[320px] min-h-[260px] sm:min-h-[320px] md:min-h-[340px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
-            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/BolsoClasicoV.png');"></div>
-            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
-              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Bolso Clásico Noir</h3>
-              <p class="precio font-sans text-[1.05rem] mb-2">€390</p>
-              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
-            </div>
+                <div>
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Tren inferior</h4>
+                  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ROPA/jupe_plissee_ivoire_P.webp" alt="Jupe Plissee Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Jupe Plissee Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Faldas</p>
+                      <p class="font-bold text-black text-lg mb-2">€132</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ROPA/pantalon_palazzo_ivoire_P.webp" alt="Pantalon Palazzo Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Pantalon Palazzo Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Pantalones</p>
+                      <p class="font-bold text-black text-lg mb-2">€168</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Completos</h4>
+                  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ROPA/combinaison_elegante_ivoire_P.webp" alt="Combinaison Elegante Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Combinaison Elegante Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Monos</p>
+                      <p class="font-bold text-black text-lg mb-2">€195</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ROPA/veste_courte_ivoire_P.webp" alt="Veste Courte Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Veste Courte Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Completos</p>
+                      <p class="font-bold text-black text-lg mb-2">€176</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ROPA/robe_satin_ivoire_P.webp" alt="Robe Satin Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Robe Satin Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Vestidos</p>
+                      <p class="font-bold text-black text-lg mb-2">€238</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ROPA/trench_long_ivoire_P.webp" alt="Trench Long Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Trench Long Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Abrigos</p>
+                      <p class="font-bold text-black text-lg mb-2">€289</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section data-catalogo-section="accesorios" class="hidden">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                <h3 class="text-lg sm:text-xl font-serif text-azul-oscuro tracking-wide">Accesorios</h3>
+                <span class="text-xs uppercase tracking-widest text-azul-oscuro opacity-70">Joyería · Accesorios de ropa</span>
+              </div>
+              <div class="space-y-8">
+                <div>
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Joyería</h4>
+                  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/boucles_oreilles_creoles_dorees_A.webp" alt="Boucles Oreilles Creoles Dorees" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Boucles Creoles Dorees</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Joyería</p>
+                      <p class="font-bold text-black text-lg mb-2">€92</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/bracelet_jonc_dore_A.webp" alt="Bracelet Jonc Dore" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Bracelet Jonc Dore</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Joyería</p>
+                      <p class="font-bold text-black text-lg mb-2">€84</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/collier_medaille_doree_A.webp" alt="Collier Medaille Doree" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Collier Medaille Doree</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Joyería</p>
+                      <p class="font-bold text-black text-lg mb-2">€98</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/montre_doree_A.webp" alt="Montre Doree" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Montre Doree</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Joyería</p>
+                      <p class="font-bold text-black text-lg mb-2">€210</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Accesorios de ropa</h4>
+                  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/bolso_hobo_ivoire_A.webp" alt="Bolso Hobo Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Bolso Hobo Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Bolsos</p>
+                      <p class="font-bold text-black text-lg mb-2">€176</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/sac_matelasse_ivoire_A.webp" alt="Sac Matelasse Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Sac Matelasse Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Bolsos</p>
+                      <p class="font-bold text-black text-lg mb-2">€188</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/foulard_soie_ivoire_A.webp" alt="Foulard Soie Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Foulard Soie Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Pañuelos</p>
+                      <p class="font-bold text-black text-lg mb-2">€72</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/lunettes_soleil_ecaille_A.webp" alt="Lunettes Soleil Ecaille" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Lunettes Soleil Ecaille</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Gafas</p>
+                      <p class="font-bold text-black text-lg mb-2">€119</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/ceinture_cuir_ivoire_A.webp" alt="Ceinture Cuir Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Ceinture Cuir Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Cinturones</p>
+                      <p class="font-bold text-black text-lg mb-2">€68</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/chouchou_soie_ivoire_A.webp" alt="Chouchou Soie Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Chouchou Soie Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Accesorios de pelo</p>
+                      <p class="font-bold text-black text-lg mb-2">€34</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section data-catalogo-section="perfumeria" class="hidden">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                <h3 class="text-lg sm:text-xl font-serif text-azul-oscuro tracking-wide">Perfumería</h3>
+                <span class="text-xs uppercase tracking-widest text-azul-oscuro opacity-70">Uso diario · Nocturnos · Exclusivos</span>
+              </div>
+              <div class="space-y-8">
+                <div>
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Uso diario</h4>
+                  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_lumiere_classique_P.webp" alt="Parfum Lumiere Classique" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Lumiere Classique</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Uso diario</p>
+                      <p class="font-bold text-black text-lg mb-2">€118</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_fleur_de_lumiere_P.webp" alt="Parfum Fleur de Lumiere" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Fleur de Lumiere</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Uso diario</p>
+                      <p class="font-bold text-black text-lg mb-2">€126</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_or_matin_P.webp" alt="Parfum Or Matin" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Or Matin</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Uso diario</p>
+                      <p class="font-bold text-black text-lg mb-2">€132</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_essence_ivoire_P.webp" alt="Parfum Essence Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Essence Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Uso diario</p>
+                      <p class="font-bold text-black text-lg mb-2">€124</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Nocturnos</h4>
+                  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_signature_nuit_P.webp" alt="Parfum Signature Nuit" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Signature Nuit</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Nocturnos</p>
+                      <p class="font-bold text-black text-lg mb-2">€154</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_ambre_ivoire_P.webp" alt="Parfum Ambre Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Ambre Ivoire</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Nocturnos</p>
+                      <p class="font-bold text-black text-lg mb-2">€162</p>
+                    </div>
+                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_eclat_dore_P.webp" alt="Parfum Eclat Dore" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Eclat Dore</h3>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Nocturnos</p>
+                      <p class="font-bold text-black text-lg mb-2">€170</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rounded-2xl border-2 border-[#111827] bg-[linear-gradient(135deg,#1f2937_0%,#111827_100%)] p-4 sm:p-6 shadow-[0_16px_32px_rgba(17,24,39,0.35)]">
+                  <p class="text-[#f8f3e8] font-serif text-lg sm:text-xl tracking-wide">Coleccion Exclusiva</p>
+                  <p class="text-[#d1d5db] text-sm sm:text-base mt-1">Estos productos no estaran para siempre. Edicion limitada de Maison Elance.</p>
+                </div>
+
+                <div>
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Exclusivos</h4>
+                  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                    <div data-catalogo-product-card="true" data-perfume-exclusive="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-[#111827] bg-[#1f2937] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black hover:shadow-[0_14px_26px_rgba(17,24,39,0.35)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_elixir_dore_P.webp" alt="Parfum Elixir Dore" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <span class="self-start mb-2 rounded-full border border-[#f8f3e8]/35 bg-[#111827] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#f8f3e8]">Exclusivo</span>
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-[#f8f3e8]">Parfum Elixir Dore</h3>
+                      <p class="min-h-[1.3em] text-sm text-[#d1d5db] mb-2">Exclusivos</p>
+                      <p class="font-bold text-[#f8f3e8] text-lg mb-2">€245</p>
+                    </div>
+                    <div data-catalogo-product-card="true" data-perfume-exclusive="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-[#111827] bg-[#1f2937] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black hover:shadow-[0_14px_26px_rgba(17,24,39,0.35)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_cristal_parisien_P.webp" alt="Parfum Cristal Parisien" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <span class="self-start mb-2 rounded-full border border-[#f8f3e8]/35 bg-[#111827] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#f8f3e8]">Exclusivo</span>
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-[#f8f3e8]">Parfum Cristal Parisien</h3>
+                      <p class="min-h-[1.3em] text-sm text-[#d1d5db] mb-2">Exclusivos</p>
+                      <p class="font-bold text-[#f8f3e8] text-lg mb-2">€278</p>
+                    </div>
+                    <div data-catalogo-product-card="true" data-perfume-exclusive="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-[#111827] bg-[#1f2937] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black hover:shadow-[0_14px_26px_rgba(17,24,39,0.35)] cursor-pointer">
+                      <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_maison_luxe_P.webp" alt="Parfum Maison Luxe" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
+                      <span class="self-start mb-2 rounded-full border border-[#f8f3e8]/35 bg-[#111827] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#f8f3e8]">Exclusivo</span>
+                      <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-[#f8f3e8]">Parfum Maison Luxe</h3>
+                      <p class="min-h-[1.3em] text-sm text-[#d1d5db] mb-2">Exclusivos</p>
+                      <p class="font-bold text-[#f8f3e8] text-lg mb-2">€305</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
-          <div class="relative min-w-[270px] max-w-[320px] min-h-[340px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
-            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/Bolso+CarteritaV.png');"></div>
-            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
-              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Bolso & Carterita Nuit</h3>
-              <p class="precio font-sans text-[1.05rem] mb-2">€260</p>
-              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
-            </div>
-          </div>
-          <div class="relative min-w-[270px] max-w-[320px] min-h-[340px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
-            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/BestidoBlancoEleganteV.png');"></div>
-            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
-              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Vestido Blanc Élégant</h3>
-              <p class="precio font-sans text-[1.05rem] mb-2">€520</p>
-              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
-            </div>
-          </div>
-          <div class="relative min-w-[270px] max-w-[320px] min-h-[340px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
-            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/PañueloSedaEleganteV.png');"></div>
-            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
-              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Pañuelo Seda Élégant</h3>
-              <p class="precio font-sans text-[1.05rem] mb-2">€110</p>
-              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
-            </div>
-          </div>
-          <div class="relative min-w-[270px] max-w-[320px] min-h-[340px] flex items-end justify-center rounded-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.07)] overflow-hidden card-bg-texto card-borde-dorado">
-            <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-[filter] duration-200 img-card-bg" style="background-image: url('imagenes-referencia/PRODUCTOS/ZapatosElegantesMujeroV.png');"></div>
-            <div class="relative z-10 w-full text-center bg-[rgba(250,249,246,0.82)] px-2 py-4 rounded-b-[1.2rem] shadow-[0_2px_12px_0_rgba(7,20,38,0.04)] info-card-bottom-out">
-              <h3 class="font-serif text-[1.1rem] font-semibold mb-1">Zapatos Élégance Femme</h3>
-              <p class="precio font-sans text-[1.05rem] mb-2">€340</p>
-              <a href="#catalogo" class="btn-navbar btn-saber-mas btn-saber-mas-web">Ver producto</a>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
+
+    <div id="catalogo-producto-modal" class="hidden fixed inset-0 z-50">
+      <div id="catalogo-producto-modal-overlay" class="absolute inset-0 bg-[#111827]/50 backdrop-blur-[1px]"></div>
+      <div class="relative z-10 min-h-full flex items-center justify-center p-4">
+        <article class="w-full max-w-4xl rounded-xl border border-black/20 bg-[#f3ede1] p-5 sm:p-7 shadow-[0_20px_44px_rgba(17,24,39,0.18)]">
+          <div class="flex flex-col sm:flex-row gap-7 items-start">
+            <img id="catalogo-producto-modal-img" src="" alt="" class="w-full sm:w-[46%] h-64 sm:h-[20rem] object-cover rounded-md border border-black/15" />
+            <div class="flex-1 flex flex-col gap-5 w-full">
+              <div class="flex items-start justify-between gap-3">
+                <h3 id="catalogo-producto-modal-nombre" class="font-serif text-2xl tracking-wide text-[color:var(--azul-muy-oscuro)] flex-1 min-w-0 break-words"></h3>
+                <button id="catalogo-producto-modal-close" type="button" aria-label="Cerrar modal" class="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/20 bg-white text-[color:var(--azul-muy-oscuro)] text-xl font-semibold leading-none transition duration-200 hover:bg-[#ece4d5] hover:border-black/30">&times;</button>
+              </div>
+              <p id="catalogo-producto-modal-codigo" class="text-xs uppercase tracking-[0.14em] text-[#6b7280]"></p>
+              <p id="catalogo-producto-modal-precio" class="font-bold text-2xl text-black tracking-wide"></p>
+              <p id="catalogo-producto-modal-stock" class="text-sm font-semibold text-green-700"></p>
+
+              <div id="catalogo-producto-modal-talla-group" class="hidden">
+                <label for="catalogo-producto-modal-talla" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2 tracking-wide">Talla</label>
+                <select id="catalogo-producto-modal-talla" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black focus:outline-none focus:ring-2 focus:ring-black/20">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                </select>
+              </div>
+
+              <div id="catalogo-producto-modal-cantidad-group">
+                <label for="catalogo-producto-modal-cantidad" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2 tracking-wide">Cantidad</label>
+                <select id="catalogo-producto-modal-cantidad" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black focus:outline-none focus:ring-2 focus:ring-black/20">
+                  <option value="1">1</option>
+                </select>
+              </div>
+
+              <button id="catalogo-producto-modal-add-cart" type="button" class="mt-1 rounded-md border border-black/20 bg-[#d6c3a2] px-5 py-3 font-semibold text-[color:var(--azul-muy-oscuro)] tracking-wide transition duration-200 hover:bg-[#ccb38c] hover:border-black/30">Agregar al carrito</button>
+              <p id="catalogo-producto-modal-feedback" class="hidden text-sm text-[color:var(--azul-muy-oscuro)] pt-1"></p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
     <!-- Footer -->
     <div id="footer-placeholder"></div>
-    <script>
-      // Cargar navbar y footer
-      const cargarFragmento = (id, archivo) => {
-        return fetch(archivo)
-          .then(r => {
-            if (!r.ok) {
-              throw new Error(`No se pudo cargar ${archivo}`);
-            }
-            return r.text();
-          })
-          .then(html => {
-            document.getElementById(id).innerHTML = html;
-          })
-          .catch(error => {
-            console.error(error);
-          });
-      };
-
-      Promise.all([
-        cargarFragmento('navbar-placeholder', 'navbar.html'),
-        cargarFragmento('footer-placeholder', 'footer.html')
-      ]).then(() => {
-        document.dispatchEvent(new Event('maison:fragments-loaded'));
-        if (typeof initMaisonElance === 'function') {
-          initMaisonElance();
-        }
-      });
-    </script>
-    <script src="functions.js" defer></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        if (typeof animarFondoBody === 'function') {
-          animarFondoBody();
-        }
-      });
-    </script>
+    <script src="functions.js"></script>
   </body>
 </html>

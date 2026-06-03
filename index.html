@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Inicio | Proyecto Tailwind</title>
+    <title>Home | Tailwind Project</title>
     <meta name="description" content="Página principal del proyecto con Tailwind CSS. Diseño moderno, responsive y SEO optimizado." />
-    <meta name="keywords" content="Tailwind, SEO, Responsive, Moderno, HTML, CSS" />
+    <meta name="keywords" content="Tailwind, SEO, Responsive, Modern, HTML, CSS" />
     <meta name="author" content="4GeeksAcademy" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-blanco-caldo min-h-screen flex flex-col">
-    <div class="fixed inset-0 -z-10 bg-[url('imagenes-referencia/Fondo-background.webp')] bg-cover bg-repeat-x opacity-[0.64] pointer-events-none"></div>
-    <!-- Navbar (solo placeholder, el contenido está en navbar.html) -->
-    <div id="navbar-placeholder"></div>
+    <div id="fondo-animado" class="fixed inset-0 -z-10 bg-[url('imagenes-referencia/Fondo-background.webp')] bg-cover bg-repeat-x opacity-[0.64] pointer-events-none"></div>
+    <!-- Navbar placeholder (content loaded from navbar.html) -->
+    <header id="navbar-placeholder" role="banner"></header>
     <main id="main-content" class="flex-1 flex flex-col items-center justify-center px-4">
-      <div id="main_home" class="w-full" style="display:block; width:100%;">
+      <section id="main_home" class="w-full" style="display:block; width:100%;" aria-label="Home view">
         <!-- HERO -->
         <section class="w-full max-w-6xl mx-auto mt-6 mb-10 px-2">
           <div class="rounded-2xl shadow-md p-4 sm:p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-10 relative overflow-hidden hero-campana bg-navbar-dorado-25 backdrop-blur-md">
             <div class="flex-1 flex flex-col items-center md:items-start justify-center z-10 text-center md:text-left">
-              <h1 class="text-2xl sm:text-3xl md:text-5xl 2xl:text-7xl font-serif mb-2 sm:mb-3 tracking-widest uppercase hero-lujo-titulo">Colección Primavera 2026</h1>
-              <p class="text-base sm:text-lg md:text-xl 2xl:text-2xl font-sans mb-3 sm:mb-4">Descubre los productos más exclusivos y las campañas especiales de Maison Élance. Inspiración parisina, lujo contemporáneo.</p>
+              <h1 class="text-2xl sm:text-3xl md:text-5xl 2xl:text-7xl font-serif mb-2 sm:mb-3 tracking-widest uppercase hero-luxury-titulo">Colección Spring 2026</h1>
+              <p class="text-base sm:text-lg md:text-xl 2xl:text-2xl font-sans mb-3 sm:mb-4">Discover los products más exclusive y las campañas special de Maison Élance. Inspiración parisina, luxury contemporáneo.</p>
             </div>
             <div class="flex flex-col items-center justify-center w-full md:w-auto max-w-xs 2xl:max-w-md">
-              <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="ropa" class="block border-none bg-none p-0 rounded-[18px] shadow-[0_2px_12px_0_rgba(194,154,91,0.10)] transition-[box-shadow,transform] duration-200 w-full aspect-square max-w-[40vw] sm:max-w-[260px] md:max-w-[320px] 2xl:max-w-[400px] overflow-hidden mt-2 btn-hero-top-img">
+              <a href="#catalog" data-nav-target="catalog" data-catalog-category="clothing" class="block border-none bg-none p-0 rounded-[18px] shadow-[0_2px_12px_0_rgba(194,154,91,0.10)] transition-[box-shadow,transform] duration-200 w-full aspect-square max-w-[40vw] sm:max-w-[260px] md:max-w-[320px] 2xl:max-w-[400px] overflow-hidden mt-2 btn-hero-top-img">
                 <img src="imagenes-referencia/PRODUCTOS/Producto_Top.webp" alt="Producto Top" class="w-full h-full object-cover rounded-[18px] img-hero-top-clickeable" />
               </a>
             </div>
@@ -32,9 +32,9 @@
         </section>
         <!-- NUEVOS LANZAMIENTOS -->
         <section class="w-full max-w-6xl mx-auto mb-8 px-2">
-          <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-3 sm:mb-4 tracking-wide">Nuevos lanzamientos</h2>
-          <div class="productos-scroll flex gap-4 sm:gap-6 overflow-x-auto pt-3 pb-6">
-            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="ropa" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-3 sm:mb-4 tracking-wide">New arrivals</h2>
+          <div class="products-scroll flex gap-4 sm:gap-6 overflow-x-auto pt-3 pb-6">
+            <a href="#catalog" data-nav-target="catalog" data-catalog-category="clothing" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
               <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
                 <img src="imagenes-referencia/PRODUCTOS/BestidoBlancoEleganteV.webp" alt="Robe Blanche Élégante" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
                 <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Robe Blanche Élégante</h3>
@@ -42,35 +42,35 @@
                 <p class="font-bold text-black text-lg mb-2">€220</p>
               </div>
             </a>
-            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="accesorios" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+            <a href="#catalog" data-nav-target="catalog" data-catalog-category="accessories" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
               <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
                 <img src="imagenes-referencia/PRODUCTOS/BolsoClasicoV.webp" alt="Sac Classique Parisien" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
                 <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Sac Classique Parisien</h3>
-                <p class="min-h-[1.3em] text-sm text-black mb-2">Bolsos</p>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Bags</p>
                 <p class="font-bold text-black text-lg mb-2">€180</p>
               </div>
             </a>
-            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="accesorios" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+            <a href="#catalog" data-nav-target="catalog" data-catalog-category="accessories" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
               <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
                 <img src="imagenes-referencia/PRODUCTOS/PañueloSedaEleganteV.webp" alt="Foulard de Soie Lumière" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
                 <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Foulard de Soie Lumière</h3>
-                <p class="min-h-[1.3em] text-sm text-black mb-2">Accesorios</p>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Accessories</p>
                 <p class="font-bold text-black text-lg mb-2">€60</p>
               </div>
             </a>
-            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="perfumeria" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+            <a href="#catalog" data-nav-target="catalog" data-catalog-category="perfumery" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
               <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
                 <img src="imagenes-referencia/PRODUCTOS/ColoniaN.webp" alt="Eau de Parfum Élance" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
                 <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Eau de Parfum Élance</h3>
-                <p class="min-h-[1.3em] text-sm text-black mb-2">Perfumería</p>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Perfumery</p>
                 <p class="font-bold text-black text-lg mb-2">€130</p>
               </div>
             </a>
-            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="ropa" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+            <a href="#catalog" data-nav-target="catalog" data-catalog-category="clothing" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
               <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
                 <img src="imagenes-referencia/PRODUCTOS/Chaqueta_BlancaN.webp" alt="Blazer Blanche Couture" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
                 <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Blazer Blanche Couture</h3>
-                <p class="min-h-[1.3em] text-sm text-black mb-2">Alta costura</p>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Haute couture</p>
                 <p class="font-bold text-black text-lg mb-2">€340</p>
               </div>
             </a>
@@ -78,74 +78,74 @@
         </section>
         <!-- MÁS VENDIDOS -->
         <section class="w-full max-w-6xl mx-auto mb-8 px-2">
-          <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-3 sm:mb-4 tracking-wide">Más vendidos</h2>
-          <div class="productos-scroll flex gap-4 sm:gap-6 overflow-x-auto pt-3 pb-6">
-            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="accesorios" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-3 sm:mb-4 tracking-wide">Best sellers</h2>
+          <div class="products-scroll flex gap-4 sm:gap-6 overflow-x-auto pt-3 pb-6">
+            <a href="#catalog" data-nav-target="catalog" data-catalog-category="accessories" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
               <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
                 <img src="imagenes-referencia/PRODUCTOS/Bolso+CarteritaV.webp" alt="Sac Élégant avec Pochette" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
                 <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Sac Élégant avec Pochette</h3>
-                <p class="min-h-[1.3em] text-sm text-black mb-2">Bolsos</p>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Bags</p>
                 <p class="font-bold text-black text-lg mb-2">€210</p>
               </div>
             </a>
-            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="ropa" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+            <a href="#catalog" data-nav-target="catalog" data-catalog-category="clothing" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
               <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
-                <img src="imagenes-referencia/PRODUCTOS/ZapatosElegantesMujeroV.webp" alt="Escarpins Élégants Femme" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
+                <img src="imagenes-referencia/PRODUCTOS/ShoesElegantesMujeroV.webp" alt="Escarpins Élégants Femme" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
                 <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Escarpins Élégants Femme</h3>
-                <p class="min-h-[1.3em] text-sm text-black mb-2">Zapatos</p>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Shoes</p>
                 <p class="font-bold text-black text-lg mb-2">€150</p>
               </div>
             </a>
-            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="accesorios" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+            <a href="#catalog" data-nav-target="catalog" data-catalog-category="accessories" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
               <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
                 <img src="imagenes-referencia/PRODUCTOS/Brazalete+CollarN.webp" alt="Parure Ornementale Lumière" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
                 <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parure Ornementale</h3>
-                <p class="min-h-[1.3em] text-sm text-black mb-2">Accesorios</p>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Accessories</p>
                 <p class="font-bold text-black text-lg mb-2">€95</p>
               </div>
             </a>
-            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="accesorios" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+            <a href="#catalog" data-nav-target="catalog" data-catalog-category="accessories" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
               <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
                 <img src="imagenes-referencia/PRODUCTOS/Bolso_RedondoN.webp" alt="Sac Rond Nuit" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
                 <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Sac Rond Nuit</h3>
-                <p class="min-h-[1.3em] text-sm text-black mb-2">Bolsos</p>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Bags</p>
                 <p class="font-bold text-black text-lg mb-2">€175</p>
               </div>
             </a>
-            <a href="#catalogo" data-nav-target="catalogo" data-catalogo-category="accesorios" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
+            <a href="#catalog" data-nav-target="catalog" data-catalog-category="accessories" class="group block min-w-[220px] max-w-xs transition-transform duration-200 hover:-translate-y-1">
               <div class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 group-hover:border-black/90 group-hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)]">
                 <img src="imagenes-referencia/PRODUCTOS/GafasN.webp" alt="Lunettes Soleil Paris" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 group-hover:scale-[1.03]" />
                 <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Lunettes Soleil Paris</h3>
-                <p class="min-h-[1.3em] text-sm text-black mb-2">Accesorios</p>
+                <p class="min-h-[1.3em] text-sm text-black mb-2">Accessories</p>
                 <p class="font-bold text-black text-lg mb-2">€110</p>
               </div>
             </a>
           </div>
         </section>
-      </div>
-      <!-- CATÁLOGO (oculto por defecto) -->
-      <div id="main_catalogo" style="width: 100%;" class="w-full max-w-6xl mx-auto mt-6 mb-10 px-2">
+      </section>
+      <!-- Catalog view -->
+      <section id="main_catalog" style="width: 100%;" class="w-full max-w-6xl mx-auto mt-6 mb-10 px-2" aria-label="Catalog view">
         <section class="mb-10">
           <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
             <div>
-              <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-1 tracking-wide">Catálogo</h2>
-              <p class="text-sm text-azul-oscuro opacity-80">Explora las colecciones por categoría.</p>
+              <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-1 tracking-wide">Catalog</h2>
+              <p class="text-sm text-azul-oscuro opacity-80">Explore collections by category.</p>
             </div>
             <div class="relative w-full sm:w-auto">
-              <button id="catalogo-categorias-toggle" class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[color:var(--dorado)] bg-[rgba(255,255,255,0.9)] px-4 py-2 font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_20px_rgba(194,154,91,0.2)] sm:w-auto" aria-controls="catalogo-categorias-menu" aria-expanded="false" type="button">
-                Categorías
+              <button id="catalog-categories-toggle" class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[color:var(--dorado)] bg-[rgba(255,255,255,0.9)] px-4 py-2 font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_20px_rgba(194,154,91,0.2)] sm:w-auto" aria-controls="catalog-categories-menu" aria-expanded="false" type="button">
+                Categories
                 <span aria-hidden="true">☰</span>
               </button>
-              <div id="catalogo-categorias-menu" class="absolute right-0 mt-2 w-full sm:w-56 bg-navbar-dorado-25/95 backdrop-blur-md border border-[color:var(--dorado)] rounded-2xl shadow-[0_12px_24px_rgba(31,42,68,0.12)] p-2 hidden z-20">
+              <div id="catalog-categories-menu" class="absolute right-0 mt-2 w-full sm:w-56 bg-navbar-dorado-25/95 backdrop-blur-md border border-[color:var(--dorado)] rounded-2xl shadow-[0_12px_24px_rgba(31,42,68,0.12)] p-2 hidden z-20">
                 <ul class="flex flex-col gap-2" role="list">
                   <li>
-                    <button type="button" class="w-full rounded-[0.9rem] border border-[color:var(--dorado)] px-3 py-2 text-left font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 bg-[rgba(194,154,91,0.8)]" data-catalogo-category="ropa" aria-pressed="true">Ropa</button>
+                    <button type="button" class="w-full rounded-[0.9rem] border border-[color:var(--dorado)] px-3 py-2 text-left font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 bg-[rgba(194,154,91,0.8)]" data-catalog-category="clothing" aria-pressed="true">Clothing</button>
                   </li>
                   <li>
-                    <button type="button" class="w-full rounded-[0.9rem] border border-[color:var(--dorado)] px-3 py-2 text-left font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 bg-blanco-caldo hover:bg-[rgba(194,154,91,0.12)]" data-catalogo-category="accesorios" aria-pressed="false">Accesorios</button>
+                    <button type="button" class="w-full rounded-[0.9rem] border border-[color:var(--dorado)] px-3 py-2 text-left font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 bg-blanco-caldo hover:bg-[rgba(194,154,91,0.12)]" data-catalog-category="accessories" aria-pressed="false">Accessories</button>
                   </li>
                   <li>
-                    <button type="button" class="w-full rounded-[0.9rem] border border-[color:var(--dorado)] px-3 py-2 text-left font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 bg-blanco-caldo hover:bg-[rgba(194,154,91,0.12)]" data-catalogo-category="perfumeria" aria-pressed="false">Perfumería</button>
+                    <button type="button" class="w-full rounded-[0.9rem] border border-[color:var(--dorado)] px-3 py-2 text-left font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 bg-blanco-caldo hover:bg-[rgba(194,154,91,0.12)]" data-catalog-category="perfumery" aria-pressed="false">Perfumery</button>
                   </li>
                 </ul>
               </div>
@@ -153,85 +153,85 @@
           </div>
 
           <div class="space-y-10">
-            <section data-catalogo-section="ropa">
+            <section data-catalog-section="clothing">
               <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
-                <h3 class="text-lg sm:text-xl font-serif text-azul-oscuro tracking-wide">Ropa</h3>
-                <span class="text-xs uppercase tracking-widest text-azul-oscuro opacity-70">Tren superior · Tren inferior · Completos</span>
+                <h3 class="text-lg sm:text-xl font-serif text-azul-oscuro tracking-wide">Clothing</h3>
+                <span class="text-xs uppercase tracking-widest text-azul-oscuro opacity-70">Upper body · Lower body · Full outfits</span>
               </div>
               <div class="space-y-8">
-                <div>
-                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Tren superior</h4>
+                <div data-catalog-subsection="clothing-tren-superior">
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Upper body</h4>
                   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ROPA/blouse_a_noeud_ivoire_P.webp" alt="Blouse a Noeud Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Blouse a Noeud Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Blusas</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Blouses</p>
                       <p class="font-bold text-black text-lg mb-2">€145</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ROPA/blouse_portefeuille_satin_ivoire_P.webp" alt="Blouse Portefeuille Satin Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Blouse Portefeuille Satin</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Blusas</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Blouses</p>
                       <p class="font-bold text-black text-lg mb-2">€158</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ROPA/pull_col_roule_ivoire_P.webp" alt="Pull Col Roule Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Pull Col Roule Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Punto</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Knitwear</p>
                       <p class="font-bold text-black text-lg mb-2">€149</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ROPA/veste_boucle_ivoire_P.webp" alt="Veste Boucle Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Veste Boucle Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Chaquetas</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Jackets</p>
                       <p class="font-bold text-black text-lg mb-2">€214</p>
                     </div>
                   </div>
                 </div>
 
-                <div>
-                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Tren inferior</h4>
+                <div data-catalog-subsection="clothing-tren-inferior">
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Lower body</h4>
                   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ROPA/jupe_plissee_ivoire_P.webp" alt="Jupe Plissee Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Jupe Plissee Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Faldas</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Skirts</p>
                       <p class="font-bold text-black text-lg mb-2">€132</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ROPA/pantalon_palazzo_ivoire_P.webp" alt="Pantalon Palazzo Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Pantalon Palazzo Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Pantalones</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Trousers</p>
                       <p class="font-bold text-black text-lg mb-2">€168</p>
                     </div>
                   </div>
                 </div>
 
-                <div>
-                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Completos</h4>
+                <div data-catalog-subsection="clothing-completos">
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Full outfits</h4>
                   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ROPA/combinaison_elegante_ivoire_P.webp" alt="Combinaison Elegante Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Combinaison Elegante Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Monos</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Jumpsuits</p>
                       <p class="font-bold text-black text-lg mb-2">€195</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ROPA/veste_courte_ivoire_P.webp" alt="Veste Courte Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Veste Courte Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Completos</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Full outfits</p>
                       <p class="font-bold text-black text-lg mb-2">€176</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ROPA/robe_satin_ivoire_P.webp" alt="Robe Satin Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Robe Satin Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Vestidos</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Dresses</p>
                       <p class="font-bold text-black text-lg mb-2">€238</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ROPA/trench_long_ivoire_P.webp" alt="Trench Long Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Trench Long Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Abrigos</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Coats</p>
                       <p class="font-bold text-black text-lg mb-2">€289</p>
                     </div>
                   </div>
@@ -239,79 +239,79 @@
               </div>
             </section>
 
-            <section data-catalogo-section="accesorios" class="hidden">
+            <section data-catalog-section="accessories" class="hidden">
               <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
-                <h3 class="text-lg sm:text-xl font-serif text-azul-oscuro tracking-wide">Accesorios</h3>
-                <span class="text-xs uppercase tracking-widest text-azul-oscuro opacity-70">Joyería · Accesorios de ropa</span>
+                <h3 class="text-lg sm:text-xl font-serif text-azul-oscuro tracking-wide">Accessories</h3>
+                <span class="text-xs uppercase tracking-widest text-azul-oscuro opacity-70">Jewelry · Accessories de clothing</span>
               </div>
               <div class="space-y-8">
-                <div>
-                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Joyería</h4>
+                <div data-catalog-subsection="accessories-joyeria">
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Jewelry</h4>
                   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/boucles_oreilles_creoles_dorees_A.webp" alt="Boucles Oreilles Creoles Dorees" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Boucles Creoles Dorees</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Joyería</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Jewelry</p>
                       <p class="font-bold text-black text-lg mb-2">€92</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/bracelet_jonc_dore_A.webp" alt="Bracelet Jonc Dore" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Bracelet Jonc Dore</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Joyería</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Jewelry</p>
                       <p class="font-bold text-black text-lg mb-2">€84</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/collier_medaille_doree_A.webp" alt="Collier Medaille Doree" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Collier Medaille Doree</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Joyería</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Jewelry</p>
                       <p class="font-bold text-black text-lg mb-2">€98</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/montre_doree_A.webp" alt="Montre Doree" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Montre Doree</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Joyería</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Jewelry</p>
                       <p class="font-bold text-black text-lg mb-2">€210</p>
                     </div>
                   </div>
                 </div>
 
-                <div>
-                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Accesorios de ropa</h4>
+                <div data-catalog-subsection="accessories-clothing">
+                  <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Accessories de clothing</h4>
                   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/bolso_hobo_ivoire_A.webp" alt="Bolso Hobo Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Bolso Hobo Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Bolsos</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Bags</p>
                       <p class="font-bold text-black text-lg mb-2">€176</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/sac_matelasse_ivoire_A.webp" alt="Sac Matelasse Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Sac Matelasse Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Bolsos</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Bags</p>
                       <p class="font-bold text-black text-lg mb-2">€188</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/foulard_soie_ivoire_A.webp" alt="Foulard Soie Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Foulard Soie Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Pañuelos</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Scarves</p>
                       <p class="font-bold text-black text-lg mb-2">€72</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/lunettes_soleil_ecaille_A.webp" alt="Lunettes Soleil Ecaille" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Lunettes Soleil Ecaille</h3>
                       <p class="min-h-[1.3em] text-sm text-black mb-2">Gafas</p>
                       <p class="font-bold text-black text-lg mb-2">€119</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/ceinture_cuir_ivoire_A.webp" alt="Ceinture Cuir Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Ceinture Cuir Ivoire</h3>
                       <p class="min-h-[1.3em] text-sm text-black mb-2">Cinturones</p>
                       <p class="font-bold text-black text-lg mb-2">€68</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/ACCESORIOS/chouchou_soie_ivoire_A.webp" alt="Chouchou Soie Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Chouchou Soie Ivoire</h3>
-                      <p class="min-h-[1.3em] text-sm text-black mb-2">Accesorios de pelo</p>
+                      <p class="min-h-[1.3em] text-sm text-black mb-2">Accessories de pelo</p>
                       <p class="font-bold text-black text-lg mb-2">€34</p>
                     </div>
                   </div>
@@ -319,34 +319,34 @@
               </div>
             </section>
 
-            <section data-catalogo-section="perfumeria" class="hidden">
+            <section data-catalog-section="perfumery" class="hidden">
               <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
-                <h3 class="text-lg sm:text-xl font-serif text-azul-oscuro tracking-wide">Perfumería</h3>
+                <h3 class="text-lg sm:text-xl font-serif text-azul-oscuro tracking-wide">Perfumery</h3>
                 <span class="text-xs uppercase tracking-widest text-azul-oscuro opacity-70">Uso diario · Nocturnos · Exclusivos</span>
               </div>
               <div class="space-y-8">
-                <div>
+                <div data-catalog-subsection="perfumery-uso-diario">
                   <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Uso diario</h4>
                   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_lumiere_classique_P.webp" alt="Parfum Lumiere Classique" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Lumiere Classique</h3>
                       <p class="min-h-[1.3em] text-sm text-black mb-2">Uso diario</p>
                       <p class="font-bold text-black text-lg mb-2">€118</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_fleur_de_lumiere_P.webp" alt="Parfum Fleur de Lumiere" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Fleur de Lumiere</h3>
                       <p class="min-h-[1.3em] text-sm text-black mb-2">Uso diario</p>
                       <p class="font-bold text-black text-lg mb-2">€126</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_or_matin_P.webp" alt="Parfum Or Matin" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Or Matin</h3>
                       <p class="min-h-[1.3em] text-sm text-black mb-2">Uso diario</p>
                       <p class="font-bold text-black text-lg mb-2">€132</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_essence_ivoire_P.webp" alt="Parfum Essence Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Essence Ivoire</h3>
                       <p class="min-h-[1.3em] text-sm text-black mb-2">Uso diario</p>
@@ -355,22 +355,22 @@
                   </div>
                 </div>
 
-                <div>
+                <div data-catalog-subsection="perfumery-nocturnos">
                   <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Nocturnos</h4>
                   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_signature_nuit_P.webp" alt="Parfum Signature Nuit" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Signature Nuit</h3>
                       <p class="min-h-[1.3em] text-sm text-black mb-2">Nocturnos</p>
                       <p class="font-bold text-black text-lg mb-2">€154</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_ambre_ivoire_P.webp" alt="Parfum Ambre Ivoire" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Ambre Ivoire</h3>
                       <p class="min-h-[1.3em] text-sm text-black mb-2">Nocturnos</p>
                       <p class="font-bold text-black text-lg mb-2">€162</p>
                     </div>
-                    <div data-catalogo-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
+                    <div data-catalog-product-card="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-black/70 bg-[#f7f2e8] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black/90 hover:shadow-[0_14px_26px_rgba(31,42,68,0.12)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_eclat_dore_P.webp" alt="Parfum Eclat Dore" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-black">Parfum Eclat Dore</h3>
                       <p class="min-h-[1.3em] text-sm text-black mb-2">Nocturnos</p>
@@ -381,27 +381,27 @@
 
                 <div class="rounded-2xl border-2 border-[#111827] bg-[linear-gradient(135deg,#1f2937_0%,#111827_100%)] p-4 sm:p-6 shadow-[0_16px_32px_rgba(17,24,39,0.35)]">
                   <p class="text-[#f8f3e8] font-serif text-lg sm:text-xl tracking-wide">Coleccion Exclusiva</p>
-                  <p class="text-[#d1d5db] text-sm sm:text-base mt-1">Estos productos no estaran para siempre. Edicion limitada de Maison Elance.</p>
+                  <p class="text-[#d1d5db] text-sm sm:text-base mt-1">Estos products no estaran para siempre. Edicion limitada de Maison Elance.</p>
                 </div>
 
-                <div>
+                <div data-catalog-subsection="perfumery-exclusive">
                   <h4 class="text-sm sm:text-base font-semibold uppercase tracking-[0.14em] text-azul-oscuro mb-3">Exclusivos</h4>
                   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                    <div data-catalogo-product-card="true" data-perfume-exclusive="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-[#111827] bg-[#1f2937] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black hover:shadow-[0_14px_26px_rgba(17,24,39,0.35)] cursor-pointer">
+                    <div data-catalog-product-card="true" data-perfume-exclusive="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-[#111827] bg-[#1f2937] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black hover:shadow-[0_14px_26px_rgba(17,24,39,0.35)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_elixir_dore_P.webp" alt="Parfum Elixir Dore" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <span class="self-start mb-2 rounded-full border border-[#f8f3e8]/35 bg-[#111827] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#f8f3e8]">Exclusivo</span>
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-[#f8f3e8]">Parfum Elixir Dore</h3>
                       <p class="min-h-[1.3em] text-sm text-[#d1d5db] mb-2">Exclusivos</p>
                       <p class="font-bold text-[#f8f3e8] text-lg mb-2">€245</p>
                     </div>
-                    <div data-catalogo-product-card="true" data-perfume-exclusive="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-[#111827] bg-[#1f2937] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black hover:shadow-[0_14px_26px_rgba(17,24,39,0.35)] cursor-pointer">
+                    <div data-catalog-product-card="true" data-perfume-exclusive="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-[#111827] bg-[#1f2937] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black hover:shadow-[0_14px_26px_rgba(17,24,39,0.35)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_cristal_parisien_P.webp" alt="Parfum Cristal Parisien" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <span class="self-start mb-2 rounded-full border border-[#f8f3e8]/35 bg-[#111827] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#f8f3e8]">Exclusivo</span>
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-[#f8f3e8]">Parfum Cristal Parisien</h3>
                       <p class="min-h-[1.3em] text-sm text-[#d1d5db] mb-2">Exclusivos</p>
                       <p class="font-bold text-[#f8f3e8] text-lg mb-2">€278</p>
                     </div>
-                    <div data-catalogo-product-card="true" data-perfume-exclusive="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-[#111827] bg-[#1f2937] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black hover:shadow-[0_14px_26px_rgba(17,24,39,0.35)] cursor-pointer">
+                    <div data-catalog-product-card="true" data-perfume-exclusive="true" class="min-h-[320px] flex flex-col items-center justify-between rounded-2xl border border-[#111827] bg-[#1f2937] backdrop-blur-md p-4 shadow transition duration-200 hover:border-black hover:shadow-[0_14px_26px_rgba(17,24,39,0.35)] cursor-pointer">
                       <img src="imagenes-referencia/PRODUCTOS/PERFUMES/parfum_maison_luxe_P.webp" alt="Parfum Maison Luxe" class="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-200 hover:scale-[1.03]" />
                       <span class="self-start mb-2 rounded-full border border-[#f8f3e8]/35 bg-[#111827] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#f8f3e8]">Exclusivo</span>
                       <h3 class="min-h-[2.6em] font-serif text-lg font-semibold mb-1 text-center text-[#f8f3e8]">Parfum Maison Luxe</h3>
@@ -414,27 +414,241 @@
             </section>
           </div>
         </section>
-      </div>
+      </section>
+
+      <section id="main_cart" style="display:none; width: 100%;" class="w-full max-w-6xl mx-auto mt-6 mb-10 px-2" aria-label="Cart view">
+        <section class="mb-10">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-1 tracking-wide">Cart</h2>
+              <p class="text-sm text-azul-oscuro opacity-80">Review your products before checkout.</p>
+            </div>
+          </div>
+
+          <div id="cart-empty-state" class="rounded-2xl border border-[color:var(--dorado)] bg-[#f7f2e8] p-8 sm:p-12 text-center shadow-[0_14px_26px_rgba(31,42,68,0.10)]">
+            <p class="text-lg sm:text-xl font-serif text-[color:var(--azul-muy-oscuro)] mb-4">There are no products in your cart. Visit the catalog.</p>
+            <a href="#catalog" data-nav-target="catalog" class="inline-flex items-center justify-center rounded-full border border-[color:var(--dorado)] bg-[rgba(194,154,91,0.85)] px-6 py-3 font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_18px_rgba(194,154,91,0.28)]">Go to catalog</a>
+          </div>
+
+          <div id="cart-content" class="hidden grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+            <div id="cart-items" class="lg:col-span-2 space-y-4"></div>
+            <aside class="rounded-2xl border border-[color:var(--dorado)] bg-[#f7f2e8] p-5 shadow-[0_12px_24px_rgba(31,42,68,0.10)] sticky top-24">
+              <h3 class="font-serif text-xl text-[color:var(--azul-muy-oscuro)] mb-4">Summary</h3>
+              <div class="space-y-2 text-sm text-[color:var(--azul-muy-oscuro)]">
+                <p class="flex items-center justify-between"><span>Products</span><span id="cart-summary-count" class="font-semibold">0</span></p>
+                <p class="flex items-center justify-between"><span>Subtotal</span><span id="cart-summary-subtotal" class="font-semibold">€0.00</span></p>
+                <p class="flex items-center justify-between"><span>VAT (21%)</span><span id="cart-summary-vat" class="font-semibold">€0.00</span></p>
+                <p class="flex items-center justify-between text-base border-t border-black/15 pt-2"><span>Total</span><span id="cart-summary-total" class="font-bold">€0.00</span></p>
+              </div>
+              <button id="cart-clear-btn" type="button" class="mt-4 w-full rounded-full border border-[#1f2a44]/30 bg-white px-5 py-2.5 font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 hover:bg-[#e8e4dc]">Clear cart</button>
+              <a href="#checkout" data-nav-target="checkout" class="mt-5 w-full inline-flex items-center justify-center rounded-full border border-[color:var(--dorado)] bg-[rgba(194,154,91,0.85)] px-5 py-3 font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_18px_rgba(194,154,91,0.28)]">Go to checkout</a>
+            </aside>
+          </div>
+        </section>
+      </section>
+
+      <section id="main_checkout" style="display:none; width: 100%;" class="w-full max-w-6xl mx-auto mt-6 mb-10 px-2" aria-label="Checkout view">
+        <section class="mb-10">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl md:text-3xl font-serif text-azul-oscuro mb-1 tracking-wide">Checkout</h2>
+              <p class="text-sm text-azul-oscuro opacity-80">Complete the steps to finish your order.</p>
+            </div>
+          </div>
+
+          <article class="rounded-2xl border border-[color:var(--dorado)] bg-[#f7f2e8] p-4 sm:p-6 shadow-[0_10px_18px_rgba(31,42,68,0.08)] mb-6">
+            <h3 class="font-serif text-xl text-[color:var(--azul-muy-oscuro)] mb-4">Products to be paid</h3>
+            <div id="checkout-summary-empty" class="rounded-xl border border-dashed border-black/25 bg-white/60 p-4 text-sm text-[color:var(--azul-muy-oscuro)] opacity-80">
+              There are no products in the cart.
+            </div>
+            <div id="checkout-summary-content" class="hidden">
+              <div id="checkout-summary-items" class="space-y-3"></div>
+              <div class="mt-4 rounded-xl border border-black/15 bg-white/70 p-4 text-sm text-[color:var(--azul-muy-oscuro)] space-y-2">
+                <p class="flex items-center justify-between"><span>Subtotal</span><span id="checkout-summary-subtotal" class="font-semibold">€0.00</span></p>
+                <p class="flex items-center justify-between"><span>VAT (21%)</span><span id="checkout-summary-iva" class="font-semibold">€0.00</span></p>
+                <p class="flex items-center justify-between border-t border-black/15 pt-2 text-base"><span>Total</span><span id="checkout-summary-total" class="font-bold">€0.00</span></p>
+              </div>
+            </div>
+          </article>
+
+          <div class="rounded-2xl border border-[color:var(--dorado)] bg-[#f7f2e8] p-4 sm:p-6 shadow-[0_12px_24px_rgba(31,42,68,0.10)] mb-6">
+            <div class="relative">
+              <div class="absolute top-5 left-0 right-0 h-[2px] bg-[rgba(31,42,68,0.15)]"></div>
+              <div id="checkout-progress-line" class="absolute top-5 left-0 h-[2px] bg-[color:var(--dorado)] transition-all duration-300" style="width: 0%;"></div>
+              <div class="relative grid grid-cols-3 gap-3">
+                <div class="flex flex-col items-center text-center">
+                  <span id="checkout-step-indicator-1" class="w-10 h-10 rounded-full border-2 border-[color:var(--dorado)] bg-[rgba(194,154,91,0.85)] text-[color:var(--azul-muy-oscuro)] font-semibold flex items-center justify-center">1</span>
+                  <p class="mt-2 text-xs sm:text-sm font-semibold text-[color:var(--azul-muy-oscuro)]">Personal details</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <span id="checkout-step-indicator-2" class="w-10 h-10 rounded-full border-2 border-[rgba(31,42,68,0.25)] bg-white text-[color:var(--azul-muy-oscuro)] font-semibold flex items-center justify-center">2</span>
+                  <p class="mt-2 text-xs sm:text-sm font-semibold text-[color:var(--azul-muy-oscuro)]">Paso 2</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                  <span id="checkout-step-indicator-3" class="w-10 h-10 rounded-full border-2 border-[rgba(31,42,68,0.25)] bg-white text-[color:var(--azul-muy-oscuro)] font-semibold flex items-center justify-center">3</span>
+                  <p class="mt-2 text-xs sm:text-sm font-semibold text-[color:var(--azul-muy-oscuro)]">Paso 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <article id="checkout-step-1" class="rounded-2xl border border-[color:var(--dorado)] bg-[#f7f2e8] p-4 sm:p-6 shadow-[0_10px_18px_rgba(31,42,68,0.08)]">
+              <h3 class="font-serif text-xl text-[color:var(--azul-muy-oscuro)] mb-4">1. Personal details</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="checkout-first-name" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">First name</label>
+                  <input id="checkout-first-name" type="text" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black focus:outline-none focus:ring-2 focus:ring-black/20" />
+                </div>
+                <div>
+                  <label for="checkout-last-name" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">Last name</label>
+                  <input id="checkout-last-name" type="text" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black focus:outline-none focus:ring-2 focus:ring-black/20" />
+                </div>
+                <div>
+                  <label for="checkout-email" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">Email address</label>
+                  <input id="checkout-email" type="email" autocomplete="email" placeholder="first-name@dominio.com" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20" />
+                </div>
+                <div>
+                  <label for="checkout-phone" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">Phone number</label>
+                  <div class="grid grid-cols-[minmax(150px,190px)_1fr] gap-2">
+                    <select id="checkout-country-code" class="w-full rounded-md border border-black/25 bg-white px-2 py-2.5 text-sm text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20">
+                      <option value="">Country code</option>
+                    </select>
+                    <input id="checkout-phone" type="tel" autocomplete="tel-national" placeholder="Your number" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20" />
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4 flex justify-end">
+                <button id="checkout-step-1-continue" type="button" disabled class="rounded-full border border-[color:var(--dorado)] bg-[rgba(194,154,91,0.85)] px-5 py-2.5 font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 enabled:hover:-translate-y-0.5 enabled:hover:shadow-[0_10px_18px_rgba(194,154,91,0.28)] disabled:opacity-50 disabled:cursor-not-allowed">Continue to step 2</button>
+              </div>
+            </article>
+
+            <article id="checkout-step-2" aria-disabled="true" class="rounded-2xl border border-black/15 bg-[#f7f2e8] p-4 sm:p-6 opacity-55 pointer-events-none transition duration-200">
+              <h3 class="font-serif text-xl text-[color:var(--azul-muy-oscuro)] mb-4">2. Billing address</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="checkout-billing-pais" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">Country</label>
+                  <select id="checkout-billing-pais" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20">
+                    <option value="">Select a country</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="checkout-billing-city" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">City</label>
+                  <input id="checkout-billing-city" type="text" autocomplete="address-level2" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="checkout-billing-street" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">Street</label>
+                  <input id="checkout-billing-street" type="text" autocomplete="address-line1" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20" />
+                </div>
+                <div>
+                  <label for="checkout-billing-postal-code" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">Postal code</label>
+                  <input id="checkout-billing-postal-code" type="text" inputmode="numeric" maxlength="5" placeholder="5 digits" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20" />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">Availability window</label>
+                  <div class="grid grid-cols-2 gap-2">
+                    <select id="checkout-schedule-min" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20">
+                      <option value="">From</option>
+                    </select>
+                    <select id="checkout-schedule-max" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20">
+                      <option value="">To</option>
+                    </select>
+                  </div>
+                  <p class="mt-2 text-xs text-[color:var(--azul-muy-oscuro)] opacity-80">Shipping window: 08:00 to 18:00.</p>
+                </div>
+              </div>
+              <div class="mt-4 rounded-lg border border-dashed border-[color:var(--dorado)] bg-[rgba(255,255,255,0.65)] px-4 py-3">
+                <p id="checkout-estimated-delivery" class="text-sm text-[color:var(--azul-muy-oscuro)]">Select your availability window to see the estimated package arrival.</p>
+              </div>
+              <div class="mt-4 flex justify-end">
+                <button id="checkout-step-2-continue" type="button" disabled class="rounded-full border border-[color:var(--dorado)] bg-[rgba(194,154,91,0.85)] px-5 py-2.5 font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 enabled:hover:-translate-y-0.5 enabled:hover:shadow-[0_10px_18px_rgba(194,154,91,0.28)] disabled:opacity-50 disabled:cursor-not-allowed">Continue to step 3</button>
+              </div>
+            </article>
+
+            <article id="checkout-step-3" aria-disabled="true" class="rounded-2xl border border-black/15 bg-[#f7f2e8] p-4 sm:p-6 opacity-55 pointer-events-none transition duration-200">
+              <h3 class="font-serif text-xl text-[color:var(--azul-muy-oscuro)] mb-4">3. Payment method</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="sm:col-span-2">
+                  <label for="checkout-card-number" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">Card number (16 digits)</label>
+                  <input id="checkout-card-number" type="text" inputmode="numeric" maxlength="16" placeholder="1234123412341234" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20" />
+                </div>
+                <div>
+                  <label for="checkout-card-cvv" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">CVV (3 digits)</label>
+                  <input id="checkout-card-cvv" type="password" inputmode="numeric" maxlength="3" placeholder="***" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20" />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">Fecha de caducidad</label>
+                  <div class="grid grid-cols-2 gap-2">
+                    <select id="checkout-card-exp-month" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20">
+                      <option value="">Mes</option>
+                    </select>
+                    <select id="checkout-card-exp-year" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20">
+                      <option value="">Ano</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="checkout-card-owner-name" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">Cardholder first name</label>
+                  <input id="checkout-card-owner-name" type="text" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20" />
+                </div>
+                <div>
+                  <label for="checkout-card-owner-lastname1" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">Cardholder last name 1</label>
+                  <input id="checkout-card-owner-lastname1" type="text" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="checkout-card-owner-lastname2" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2">Cardholder last name 2</label>
+                  <input id="checkout-card-owner-lastname2" type="text" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black transition-colors focus:outline-none focus:ring-2 focus:ring-black/20" />
+                </div>
+              </div>
+              <div class="mt-5 flex justify-end">
+                <button id="checkout-pay-button" type="button" disabled class="rounded-full border border-[color:var(--dorado)] bg-[rgba(194,154,91,0.85)] px-6 py-3 font-semibold text-[color:var(--azul-muy-oscuro)] transition duration-200 enabled:hover:-translate-y-0.5 enabled:hover:shadow-[0_10px_18px_rgba(194,154,91,0.28)] disabled:opacity-50 disabled:cursor-not-allowed">Efectuar pago</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
     </main>
 
-    <div id="catalogo-producto-modal" class="hidden fixed inset-0 z-50">
-      <div id="catalogo-producto-modal-overlay" class="absolute inset-0 bg-[#111827]/50 backdrop-blur-[1px]"></div>
+    <div id="checkout-payment-modal" class="hidden fixed inset-0 z-[70]">
+      <div class="absolute inset-0 bg-[#111827]/60"></div>
       <div class="relative z-10 min-h-full flex items-center justify-center p-4">
-        <article class="w-full max-w-4xl rounded-xl border border-black/20 bg-[#f3ede1] p-5 sm:p-7 shadow-[0_20px_44px_rgba(17,24,39,0.18)]">
-          <div class="flex flex-col sm:flex-row gap-7 items-start">
-            <img id="catalogo-producto-modal-img" src="" alt="" class="w-full sm:w-[46%] h-64 sm:h-[20rem] object-cover rounded-md border border-black/15" />
-            <div class="flex-1 flex flex-col gap-5 w-full">
-              <div class="flex items-start justify-between gap-3">
-                <h3 id="catalogo-producto-modal-nombre" class="font-serif text-2xl tracking-wide text-[color:var(--azul-muy-oscuro)] flex-1 min-w-0 break-words"></h3>
-                <button id="catalogo-producto-modal-close" type="button" aria-label="Cerrar modal" class="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/20 bg-white text-[color:var(--azul-muy-oscuro)] text-xl font-semibold leading-none transition duration-200 hover:bg-[#ece4d5] hover:border-black/30">&times;</button>
-              </div>
-              <p id="catalogo-producto-modal-codigo" class="text-xs uppercase tracking-[0.14em] text-[#6b7280]"></p>
-              <p id="catalogo-producto-modal-precio" class="font-bold text-2xl text-black tracking-wide"></p>
-              <p id="catalogo-producto-modal-stock" class="text-sm font-semibold text-green-700"></p>
+        <article class="w-full max-w-md rounded-2xl border border-black/15 bg-[#f7f2e8] p-6 text-center shadow-[0_24px_50px_rgba(17,24,39,0.22)]">
+          <div id="checkout-payment-processing" class="space-y-4">
+            <div class="mx-auto h-14 w-14 rounded-full border-4 border-[rgba(194,154,91,0.35)] border-t-[color:var(--dorado)] animate-spin"></div>
+            <p class="font-semibold text-[color:var(--azul-muy-oscuro)] text-lg">Payment is being processed...</p>
+            <p class="text-sm text-[color:var(--azul-muy-oscuro)] opacity-80">Do not close this window.</p>
+          </div>
 
-              <div id="catalogo-producto-modal-talla-group" class="hidden">
-                <label for="catalogo-producto-modal-talla" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2 tracking-wide">Talla</label>
-                <select id="catalogo-producto-modal-talla" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black focus:outline-none focus:ring-2 focus:ring-black/20">
+          <div id="checkout-payment-success" class="hidden space-y-4">
+            <div class="mx-auto h-14 w-14 rounded-full bg-green-600 text-white text-3xl flex items-center justify-center">✓</div>
+            <p class="font-semibold text-green-700 text-lg">Purchase completed</p>
+            <p id="checkout-payment-success-message" class="text-sm text-[color:var(--azul-muy-oscuro)]"></p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div id="catalog-producto-modal" class="hidden fixed inset-0 z-50">
+      <div id="catalog-producto-modal-overlay" class="absolute inset-0 bg-[#111827]/50 backdrop-blur-[1px]"></div>
+      <div class="relative z-10 min-h-full flex items-center justify-center p-4">
+        <article class="w-full max-w-5xl rounded-xl border border-black/20 bg-[#f3ede1] p-5 sm:p-7 shadow-[0_20px_44px_rgba(17,24,39,0.18)]">
+          <div class="flex flex-col lg:flex-row gap-7 items-stretch">
+            <div class="w-full lg:w-1/2">
+              <img id="catalog-producto-modal-img" src="" alt="" class="w-full h-72 lg:h-full min-h-[20rem] object-cover rounded-md border border-black/15" />
+            </div>
+            <div class="w-full lg:w-1/2 flex flex-col gap-5">
+              <div class="flex items-start justify-between gap-3">
+                <h3 id="catalog-producto-modal-first-name" class="font-serif text-2xl tracking-wide text-[color:var(--azul-muy-oscuro)] flex-1 min-w-0 break-words"></h3>
+                <button id="catalog-producto-modal-close" type="button" aria-label="Cerrar modal" class="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/20 bg-white text-[color:var(--azul-muy-oscuro)] text-xl font-semibold leading-none transition duration-200 hover:bg-[#ece4d5] hover:border-black/30">&times;</button>
+              </div>
+              <p id="catalog-producto-modal-codigo" class="text-xs uppercase tracking-[0.14em] text-[#6b7280]"></p>
+              <p id="catalog-producto-modal-precio" class="font-bold text-2xl text-black tracking-wide"></p>
+              <p id="catalog-producto-modal-stock" class="text-sm font-semibold text-green-700"></p>
+              <p id="catalog-producto-modal-descripcion" class="text-sm text-[color:var(--azul-muy-oscuro)] leading-relaxed bg-white/60 border border-black/10 rounded-md px-3 py-2"></p>
+
+              <div id="catalog-producto-modal-talla-group" class="hidden">
+                <label for="catalog-producto-modal-talla" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2 tracking-wide">Talla</label>
+                <select id="catalog-producto-modal-talla" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black focus:outline-none focus:ring-2 focus:ring-black/20">
                   <option value="S">S</option>
                   <option value="M">M</option>
                   <option value="L">L</option>
@@ -442,23 +656,23 @@
                 </select>
               </div>
 
-              <div id="catalogo-producto-modal-cantidad-group">
-                <label for="catalogo-producto-modal-cantidad" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2 tracking-wide">Cantidad</label>
-                <select id="catalogo-producto-modal-cantidad" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black focus:outline-none focus:ring-2 focus:ring-black/20">
+              <div id="catalog-producto-modal-cantidad-group">
+                <label for="catalog-producto-modal-cantidad" class="block text-sm font-semibold text-[color:var(--azul-muy-oscuro)] mb-2 tracking-wide">Cantidad</label>
+                <select id="catalog-producto-modal-cantidad" class="w-full rounded-md border border-black/25 bg-white px-3 py-2.5 text-black focus:outline-none focus:ring-2 focus:ring-black/20">
                   <option value="1">1</option>
                 </select>
               </div>
 
-              <button id="catalogo-producto-modal-add-cart" type="button" class="mt-1 rounded-md border border-black/20 bg-[#d6c3a2] px-5 py-3 font-semibold text-[color:var(--azul-muy-oscuro)] tracking-wide transition duration-200 hover:bg-[#ccb38c] hover:border-black/30">Agregar al carrito</button>
-              <p id="catalogo-producto-modal-feedback" class="hidden text-sm text-[color:var(--azul-muy-oscuro)] pt-1"></p>
+              <button id="catalog-producto-modal-add-cart" type="button" class="mt-1 rounded-md border border-black/20 bg-[#d6c3a2] px-5 py-3 font-semibold text-[color:var(--azul-muy-oscuro)] tracking-wide transition duration-200 hover:bg-[#ccb38c] hover:border-black/30">Agregar al cart</button>
+              <p id="catalog-producto-modal-feedback" class="hidden text-sm text-[color:var(--azul-muy-oscuro)] pt-1"></p>
             </div>
           </div>
         </article>
       </div>
     </div>
 
-    <!-- Footer -->
-    <div id="footer-placeholder"></div>
+    <!-- Footer placeholder (content loaded from footer.html) -->
+    <section id="footer-placeholder" aria-label="Footer placeholder"></section>
     <script src="functions.js"></script>
   </body>
 </html>

@@ -1,54 +1,76 @@
 <!-- Navbar Maison Élance -->
-<nav class="w-full bg-degradado-crema backdrop-blur border-b-4 border-dorado shadow-sm sticky top-0 z-50 font-sans" style="border-bottom-color: var(--dorado, #C29A5B);">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-20">
+<style>
+  .main-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    gap: 1rem;
+  }
+  .navbar-right-group {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+  }
+  #desktop-search {
+    min-width: 0;
+  }
+</style>
+<nav class="w-full backdrop-blur-md border-b-4 shadow-sm sticky top-0 z-50 font-sans" style="border-bottom-color: var(--dorado, #C29A5B);">
+  <div class="main-container flex items-center h-[60px] sm:h-[70px] md:h-[80px]">
     <!-- Logo y nombre -->
-    <a href="index.html" class="flex items-center gap-2 md:gap-3 group flex-shrink-0 px-3 py-2 rounded-full transition border border-transparent hover:bg-[#e8e4dc] hover:border-dorado hover:text-dorado">
-      <img src="imagenes-referencia/Logo_Ciruclar.png" alt="Logo Maison Élance" class="w-10 h-10 object-contain" style="background: transparent;" />
-      <span class="font-serif text-base md:text-lg tracking-widest font-bold uppercase text-azul-oscuro transition-all select-none" style="font-family: 'Playfair Display', serif;">Maison Élance</span>
-    </a>
-    </a>
+    <button type="button" data-nav-target="home" class="logo-navbar flex items-center gap-2 md:gap-3">
+      <img src="imagenes-referencia/Logo_Ciruclar.webp" alt="Logo Maison Élance" class="w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 object-contain" style="background: transparent;" />
+      <span class="font-serif text-base md:text-lg 2xl:text-2xl tracking-widest font-bold uppercase transition-all select-none" style="font-family: 'Playfair Display', serif;">Maison Élance</span>
+    </button>
     <!-- Barra de búsqueda -->
-    <form class="hidden md:flex items-center flex-1 max-w-md mx-8" role="search">
-      <input type="search" placeholder="Buscar productos..." aria-label="Buscar productos" class="w-full px-4 py-2 rounded-full border border-gris-claro bg-white text-azul-oscuro placeholder-gris-medio focus:outline-none focus:ring-2 focus:ring-dorado transition" />
+    <!-- Buscador solo visible en md y lg, oculto en rangos personalizados con Tailwind -->
+    <form id="desktop-search" class="hidden md:flex items-center flex-1 max-w-xs md:max-w-md 2xl:max-w-lg mx-2 md:mx-4 lg:flex xl:flex 2xl:flex" role="search">
+      <input type="search" placeholder="Buscar productos..." aria-label="Buscar productos" class="w-full px-2 sm:px-4 py-1 sm:py-2 rounded-full border bg-white placeholder-gris-medio focus:outline-none focus:ring-2 transition text-base 2xl:text-lg" />
     </form>
-    <!-- Navegación principal -->
-    <ul class="hidden md:flex gap-2 md:gap-6 lg:gap-8 mx-auto text-azul-oscuro font-semibold tracking-wide uppercase text-xs md:text-sm">
-      <li><a href="index.html" class="btn-navbar">Home</a></li>
-      <li><a href="#catalogo" class="btn-navbar">Catálogo</a></li>
-      <li><a href="#carrito" class="btn-navbar">Carrito</a></li>
-      <li><a href="#checkout" class="btn-navbar">Checkout</a></li>
-    </ul>
-    <!-- Menú de usuario -->
-    <div class="relative ml-auto md:ml-6 flex-shrink-0">
-      <button id="user-menu-toggle" aria-label="Cuenta de usuario" class="flex items-center gap-2 px-3 py-2 rounded-full border border-gris-claro bg-white hover:bg-[#e8e4dc] hover:border-dorado transition">
-        <svg class="w-6 h-6 text-azul-oscuro" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 8-4 8-4s8 0 8 4"/></svg>
-        <span class="hidden md:inline text-azul-oscuro font-medium">Cuenta</span>
-      </button>
-      <!-- Menú desplegable (placeholder) -->
-      <div id="user-menu" class="hidden absolute right-0 mt-2 w-40 bg-white border border-gris-claro rounded-lg shadow-lg py-2 z-50">
-        <a href="#login" class="block px-4 py-2 text-azul-oscuro hover:bg-blanco-caldo">Iniciar sesión</a>
-        <a href="#registro" class="block px-4 py-2 text-azul-oscuro hover:bg-blanco-caldo">Registrarse</a>
+    <!-- Menú de usuario y navegación principal a la derecha -->
+    <div class="navbar-right-group">
+      <ul id="desktop-menu" class="hidden md:flex items-center flex-nowrap gap-2 md:gap-6 lg:gap-8 font-semibold tracking-wide uppercase text-xs sm:text-sm">
+        <li><a href="#home" data-nav-target="home" class="px-2 py-2 rounded-full border border-transparent transition inline-flex items-center gap-2 font-inherit text-[1rem] cursor-pointer hover:bg-[#e8e4dc] focus:bg-[#e8e4dc]">Home</a></li>
+        <li><a href="#catalogo" data-nav-target="catalogo" class="px-2 py-2 rounded-full border border-transparent transition inline-flex items-center gap-2 font-inherit text-[1rem] cursor-pointer hover:bg-[#e8e4dc] focus:bg-[#e8e4dc]">Catálogo</a></li>
+        <li><a href="#carrito" class="px-2 py-2 rounded-full border border-transparent transition inline-flex items-center gap-2 font-inherit text-[1rem] cursor-pointer hover:bg-[#e8e4dc] focus:bg-[#e8e4dc]">Carrito</a></li>
+        <li><a href="#checkout" class="px-2 py-2 rounded-full border border-transparent transition inline-flex items-center gap-2 font-inherit text-[1rem] cursor-pointer hover:bg-[#e8e4dc] focus:bg-[#e8e4dc]">Checkout</a></li>
+      </ul>
+      <div class="relative flex-shrink-0">
+        <button id="user-menu-toggle" aria-label="Cuenta de usuario" aria-controls="user-menu" aria-expanded="false" class="flex items-center gap-2 px-2 sm:px-3 py-1 sm:py-2 rounded-full border bg-white transition focus:outline-none focus:ring-2 focus:ring-dorado hover:bg-[#e8e4dc] text-base 2xl:text-lg w-full max-w-[10rem] md:max-w-[12rem] justify-center md:justify-start" type="button" tabindex="0">
+          <svg class="w-6 h-6 md:w-7 md:h-7 2xl:w-8 2xl:h-8 text-azul-oscuro" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 8-4 8-4s8 0 8 4"/></svg>
+          <span class="hidden md:inline text-azul-oscuro font-medium">Cuenta</span>
+        </button>
+        <!-- Menú desplegable (placeholder) -->
+        <div id="user-menu" class="hidden absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg py-2 z-50">
+          <a href="#login" class="px-4 py-2 min-w-[10rem] 2xl:min-w-[14rem] hover:bg-blanco-caldo focus:bg-blanco-caldo text-base 2xl:text-lg">Iniciar sesión</a>
+          <a href="#registro" class="px-4 py-2 min-w-[10rem] 2xl:min-w-[14rem] hover:bg-blanco-caldo focus:bg-blanco-caldo text-base 2xl:text-lg">Registrarse</a>
+        </div>
       </div>
     </div>
     <!-- Menú móvil -->
-    <button class="md:hidden flex items-center text-azul-oscuro ml-2" id="menu-toggle" aria-label="Abrir menú">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <button class="md:hidden flex items-center ml-2" id="menu-toggle" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false" type="button">
+      <svg class="w-8 h-8 md:w-10 md:h-10 2xl:w-12 2xl:h-12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
   </div>
   <!-- Menú móvil desplegable -->
-  <div class="md:hidden" id="mobile-menu" style="display:none;">
-    <form class="flex items-center px-4 py-2" role="search">
-      <input type="search" placeholder="Buscar productos..." aria-label="Buscar productos" class="w-full px-4 py-2 rounded-full border border-gris-claro bg-white text-azul-oscuro placeholder-gris-medio focus:outline-none focus:ring-2 focus:ring-dorado transition" />
+  <div class="md:hidden hidden" id="mobile-menu">
+    <form class="flex items-center px-4 py-2 bg-white/90 rounded-t-xl border-b border-dorado" role="search">
+      <input type="search" placeholder="Buscar productos..." aria-label="Buscar productos" class="w-full px-4 py-2 rounded-full border border-dorado bg-white placeholder-gris-medio focus:outline-none focus:ring-2 focus:ring-dorado transition text-base" />
     </form>
-    <ul class="flex flex-col gap-2 px-4 pb-4 text-azul-oscuro font-semibold tracking-wide uppercase text-base bg-white/95">
-      <li><a href="index.html" class="btn-navbar">Home</a></li>
-      <li><a href="#catalogo" class="btn-navbar">Catálogo</a></li>
-      <li><a href="#carrito" class="btn-navbar">Carrito</a></li>
-      <li><a href="#checkout" class="btn-navbar">Checkout</a></li>
+    <ul class="flex flex-col gap-2 px-4 py-4 font-semibold tracking-wide uppercase text-base bg-navbar-dorado-25 backdrop-blur-md rounded-b-xl shadow-lg">
+      <li><a href="#home" data-nav-target="home" class="px-3 py-2 rounded-full border border-transparent transition inline-flex items-center gap-2 font-inherit text-[1rem] cursor-pointer hover:bg-[#e8e4dc] focus:bg-[#e8e4dc] text-azul-oscuro">Home</a></li>
+      <li><a href="#catalogo" data-nav-target="catalogo" class="px-3 py-2 rounded-full border border-transparent transition inline-flex items-center gap-2 font-inherit text-[1rem] cursor-pointer hover:bg-[#e8e4dc] focus:bg-[#e8e4dc] text-azul-oscuro">Catálogo</a></li>
+      <li><a href="#carrito" class="px-3 py-2 rounded-full border border-transparent transition inline-flex items-center gap-2 font-inherit text-[1rem] cursor-pointer hover:bg-[#e8e4dc] focus:bg-[#e8e4dc] text-azul-oscuro">Carrito</a></li>
+      <li><a href="#checkout" class="px-3 py-2 rounded-full border border-transparent transition inline-flex items-center gap-2 font-inherit text-[1rem] cursor-pointer hover:bg-[#e8e4dc] focus:bg-[#e8e4dc] text-azul-oscuro">Checkout</a></li>
+      <li class="border-t border-dorado mt-2 pt-2">
+        <a href="#login" class="px-3 py-2 rounded-full border border-transparent transition font-inherit text-[1rem] cursor-pointer hover:bg-[#e8e4dc] focus:bg-[#e8e4dc] text-azul-oscuro">Iniciar sesión</a>
+      </li>
+      <li>
+        <a href="#registro" class="px-3 py-2 rounded-full border border-transparent transition font-inherit text-[1rem] cursor-pointer hover:bg-[#e8e4dc] focus:bg-[#e8e4dc] text-azul-oscuro">Registrarse</a>
+      </li>
     </ul>
-    <div class="px-4 pb-4">
-      <a href="#login" class="block px-4 py-2 text-azul-oscuro hover:bg-blanco-caldo rounded">Iniciar sesión</a>
-      <a href="#registro" class="block px-4 py-2 text-azul-oscuro hover:bg-blanco-caldo rounded">Registrarse</a>
-    </div>
   </div>
 </nav>
